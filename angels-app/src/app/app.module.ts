@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatSidenavModule, MatToolbarModule, MatListModule, MatCardModule, MatIconModule, MatMenuModule, MatFormFieldModule } from '@angular/material';
+import { MatButtonModule, MatSidenavModule, MatToolbarModule, MatListModule, MatCardModule, MatIconModule, MatMenuModule, MatFormFieldModule, MatTableModule, MatPaginatorModule, MatInputModule } from '@angular/material';
 
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { HomePageComponent } from './component/home-page/home-page.component';
@@ -34,7 +34,10 @@ import { UtenteComponent } from './component/utente/utente.component';
     MatCardModule,
     MatIconModule,
     MatMenuModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

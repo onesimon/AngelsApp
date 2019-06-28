@@ -35,7 +35,7 @@ export class UtenteComponent implements OnInit {
 
   // Creazione utenti per test
   private createUtentiMock(): Array<Utente> {
-    var utentiMock: Array<Utente>;
+    var utentiMock: Array<Utente> = [];
     var utente: Utente;
 
     utente = new Utente(1,'Angelo', 'Passariello', 'PSRAGL89L17L151F', null);
