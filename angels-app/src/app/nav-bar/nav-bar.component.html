@@ -1,44 +1,56 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav role="navigation">
-      <!--this is a place for us to add side-nav code-->
+        <!--this is a place for us to add side-nav code-->
         <mat-nav-list>
-            <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
-                <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
-            </a>
-            <a mat-list-item routerLink="/notaSpese" (click)="onSidenavClose()">
-                <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">Nota Spese</span>   
+            <mat-list-item [matMenuTriggerFor]="menu">
+                <mat-icon>home</mat-icon>
+                <a matline>Home</a>
+            </mat-list-item>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/calendario" (click)="onSidenavClose()">
+                    <mat-icon>calendar_today</mat-icon> <span class="nav-caption">Calendario</span>
+                </button>
+                <button mat-menu-item routerLink="/autovettura" (click)="onSidenavClose()">
+                    <mat-icon>directions_car</mat-icon> <span class="nav-caption">Autovettura</span>
+                </button>
+                <button mat-menu-item routerLink="/spese" (click)="onSidenavClose()">
+                    <mat-icon>monetization_on</mat-icon> <span class="nav-caption">Spese</span>
+                </button>
+            </mat-menu>
+            <a mat-list-item routerLink="/utente" (click)="onSidenavClose()">
+                <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">Utente</span>
             </a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
 
-      <!-- HEADER NAV-BAR INIZIO-->
-      <mat-toolbar (click)="sidenav.toggle()" color="primary">
-        <div fxHide.gt-xs>
-            <button mat-icon-button (click)="onToggleSidenav()">
-                <mat-icon>menu</mat-icon>
-            </button>
-        </div>
-        <div>
-            Da aggiungere funzionalità
-        </div>
-        <!-- QUESTO é il sotto menù che per ora non mi serve
-        <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-            <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-                <li>
-                    <a routerLink="/owner">Owner Actions</a>
-                </li>
-                <li>
-                    <a routerLink="/account">Account Actions</a>
-                </li>
-            </ul>
-        </div>
-        -->
-      </mat-toolbar>
-      <!-- HEDER NAV-BAR FINE-->
+        <!-- HEADER NAV-BAR INIZIO-->
+        <mat-toolbar (click)="sidenav.toggle()" color="primary">
+            <div fxHide.gt-xs>
+                <button mat-icon-button (click)="onToggleSidenav()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <div>
+                Da aggiungere funzionalità
+            </div>
+            <!-- QUESTO é il sotto menù che per ora non mi serve
+            <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+                <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+                    <li>
+                        <a routerLink="/owner">Owner Actions</a>
+                    </li>
+                    <li>
+                        <a routerLink="/account">Account Actions</a>
+                    </li>
+                </ul>
+            </div>
+            -->
+        </mat-toolbar>
+        <!-- HEDER NAV-BAR FINE-->
 
-      <main>
-        <router-outlet></router-outlet>
-      </main>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
     </mat-sidenav-content>
 </mat-sidenav-container>
