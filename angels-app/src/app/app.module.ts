@@ -4,14 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatSidenavModule, MatToolbarModule, MatListModule, MatCardModule, MatIconModule, MatMenuModule } from '@angular/material';
+import { MatButtonModule, MatSidenavModule, MatToolbarModule, MatListModule, MatCardModule, MatIconModule, MatMenuModule, MatFormFieldModule } from '@angular/material';
 
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { NotaSpeseComponent } from './nota-spese/nota-spese.component';
-import { CalendarioComponent } from './calendario/calendario.component';
-import { AutovettureComponent } from './autovetture/autovetture.component';
-import { UtenteComponent } from './utente/utente.component'; 
+import { NavBarComponent } from './component/nav-bar/nav-bar.component';
+import { HomePageComponent } from './component/home-page/home-page.component';
+import { NotaSpeseComponent } from './component/nota-spese/nota-spese.component';
+import { CalendarioComponent } from './component/calendario/calendario.component';
+import { AutovettureComponent } from './component/autovetture/autovetture.component';
+import { UtenteComponent } from './component/utente/utente.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,8 @@ import { UtenteComponent } from './utente/utente.component';
     MatListModule,
     MatCardModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

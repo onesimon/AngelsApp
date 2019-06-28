@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomePageComponent } from './home-page/home-page.component';
-import { NotaSpeseComponent } from './nota-spese/nota-spese.component';
-import { UtenteComponent } from './utente/utente.component';
-import { AutovettureComponent } from './autovetture/autovetture.component';
-import { CalendarioComponent } from './calendario/calendario.component';
+import { HomePageComponent } from './component/home-page/home-page.component';
+import { NotaSpeseComponent } from './component/nota-spese/nota-spese.component';
+import { UtenteComponent } from './component/utente/utente.component';
+import { AutovettureComponent } from './component/autovetture/autovetture.component';
+import { CalendarioComponent } from './component/calendario/calendario.component';
 
 const routes: Routes = [
     { path: 'home', component: HomePageComponent},
