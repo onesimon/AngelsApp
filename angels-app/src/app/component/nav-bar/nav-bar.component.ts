@@ -13,9 +13,6 @@ import * as moment from "moment";
 
 export class NavBarComponent implements OnInit {
 
-  @Output() public sidenavToggle = new EventEmitter();
-  @Output() public sidenavClose = new EventEmitter();
-
   //Variabili che andranno estratte dal localStorage
   utenteSelected: Utente;
   subscription: any;
@@ -37,14 +34,6 @@ export class NavBarComponent implements OnInit {
 
   selectedNavItem(item: Utente) {
     this.utenteSelected = item;
-  }
-
-  public onToggleSidenav = () => {
-    this.sidenavToggle.emit();
-  }
-
-  public onSidenavClose = () => {
-    this.sidenavClose.emit();
   }
 
 }

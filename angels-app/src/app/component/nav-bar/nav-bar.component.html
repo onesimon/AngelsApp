@@ -7,17 +7,17 @@
                 <a matline>Home</a>
             </mat-list-item>
             <mat-menu #menu="matMenu">
-                <button mat-menu-item routerLink="/calendario" (click)="onSidenavClose()">
+                <button mat-menu-item routerLink="/calendario" (click)="sidenav.close()">
                     <mat-icon>calendar_today</mat-icon> <span class="nav-caption">Calendario</span>
                 </button>
-                <button mat-menu-item routerLink="/autovettura" (click)="onSidenavClose()">
+                <button mat-menu-item routerLink="/autovettura" (click)="sidenav.close()">
                     <mat-icon>directions_car</mat-icon> <span class="nav-caption">Autovettura</span>
                 </button>
-                <button mat-menu-item routerLink="/spese" (click)="onSidenavClose()">
+                <button mat-menu-item routerLink="/spese" (click)="sidenav.close()">
                     <mat-icon>monetization_on</mat-icon> <span class="nav-caption">Spese</span>
                 </button>
             </mat-menu>
-            <a mat-list-item routerLink="/utente" (click)="onSidenavClose()">
+            <a mat-list-item routerLink="/utente" (click)="sidenav.close()">
                 <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">Utente</span>
             </a>
         </mat-nav-list>
@@ -27,7 +27,7 @@
         <!-- HEADER NAV-BAR INIZIO-->
         <mat-toolbar (click)="sidenav.toggle()" color="primary">
             <div fxHide.gt-xs>
-                <button mat-icon-button (click)="onToggleSidenav()">
+                <button mat-icon-button>
                     <mat-icon>menu</mat-icon>
                 </button>
             </div>
