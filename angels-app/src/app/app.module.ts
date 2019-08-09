@@ -12,6 +12,7 @@ import { NotaSpeseComponent } from './component/nota-spese/nota-spese.component'
 import { CalendarioComponent } from './component/calendario/calendario.component';
 import { AutovettureComponent } from './component/autovetture/autovetture.component';
 import { UtenteComponent } from './component/utente/utente.component';
+import { TableComponent } from './component/table/table/table.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UtenteComponent } from './component/utente/utente.component';
     NotaSpeseComponent,
     CalendarioComponent,
     AutovettureComponent,
-    UtenteComponent
+    UtenteComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
