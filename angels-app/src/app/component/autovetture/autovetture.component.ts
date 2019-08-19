@@ -3,6 +3,7 @@ import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 import { Autovettura } from 'src/app/model/autovettura/autovettura.model';
 import  * as moment from 'moment';
 import { element } from 'protractor';
+import { TableColumn } from 'src/app/model/tableColumn/tablecolumn.model';
 
 @Component({
   selector: 'app-autovetture',
@@ -11,12 +12,13 @@ import { element } from 'protractor';
 })
 export class AutovettureComponent implements OnInit {
 
-  columns = [
-    {columnDef : 'marca', header : 'Marca', cell : (element : Autovettura) => element.marca},
-    {columnDef : 'modello', header : 'Modello', cell : (element : Autovettura) => element.modello},
-    {columnDef : 'targa', header : 'Targa', cell : (element : Autovettura) => element.targa},
-    {columnDef : 'dataInizioString', header : 'Data inizio', cell : (element : Autovettura) => element.dataInizioString},
-    {columnDef : '_action', header : 'Azioni'}];
+  columns : TableColumn[] = [
+    new TableColumn('marca', 'Marca', (element : Autovettura) => element.marca),
+    new TableColumn('modello', 'Modello', (element : Autovettura) => element.modello),
+    new TableColumn('targa', 'Targa', (element : Autovettura) => element.targa),
+    new TableColumn('dataInizioString', 'Data inizio', (element : Autovettura) => element.dataInizioString),
+    new TableColumn('_action', 'Azioni', null)
+  ]; 
   displayedColumns = this.columns.map(x => x.columnDef);
 
   listaOggetti: any;

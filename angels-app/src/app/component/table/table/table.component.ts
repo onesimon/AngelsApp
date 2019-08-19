@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
+import { TableColumn } from 'src/app/model/tableColumn/tablecolumn.model';
 
 @Component({
   selector: 'app-table',
@@ -13,7 +14,7 @@ export class TableComponent implements OnInit {
 
   @Input() objectList: any[];
   @Input() displayedColumns: string[];
-  @Input() columns: [];
+  @Input() columns: TableColumn[];
   @Input() tableTitle: string;
   dataSource: MatTableDataSource<any>;
 
