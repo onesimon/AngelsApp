@@ -13,6 +13,7 @@ export class TableComponent implements OnInit {
 
   @Input() objectList: any[];
   @Input() displayedColumns: string[];
+  @Input() columns: [];
   @Input() tableTitle: string;
   dataSource: MatTableDataSource<any>;
 

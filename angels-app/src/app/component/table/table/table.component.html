@@ -5,13 +5,13 @@
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
         <caption>{{tableTitle}}</caption>
-        <ng-container *ngFor="let col of displayedColumns" [matColumnDef]="col">
-            <ng-container *ngIf="col != '_action'">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ col }} </th>
-                <td mat-cell *matCellDef="let element"> {{ element[col] }} </td>
+        <ng-container *ngFor="let col of columns" [matColumnDef]="col.columnDef">
+            <ng-container *ngIf="col.columnDef != '_action'">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ col.header }} </th>
+                <td mat-cell *matCellDef="let element"> {{ col.cell(element) }} </td>
             </ng-container>
-            <ng-container !*ngIf="col != '_action'">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Azioni </th>
+            <ng-container !*ngIf="col.columnDef != '_action'">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ col.header }} </th>
                 <td mat-cell *matCellDef="let element" > 
                     <button mat-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
                     <mat-menu #menu="matMenu">

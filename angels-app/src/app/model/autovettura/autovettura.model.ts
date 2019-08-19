@@ -48,4 +48,7 @@ export class Autovettura extends BaseModel{
     public set modello(value: String) {
         this._modello = value;
     }
+    public get dataInizioString(): String {
+        return this.dataInizio.format('DD/MM/YYYY');
+    }
 }
